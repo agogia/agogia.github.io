@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neurosurgery Subspecialties | Neurosurgery Field Guide</title>
+  <style>
+    :root {
+      --bg: #f6f0e7;
+      --panel: rgba(255, 255, 255, 0.76);
+      --panel-strong: rgba(255, 252, 246, 0.86);
+      --ink: #16343a;
+      --muted: #5f7175;
+      --teal: #0b7f82;
+      --sea: #46a7ae;
+      --coral: #ef7c63;
+      --gold: #d9a545;
+      --sage: #8ea57b;
+      --slate: #36535a;
+      --line: rgba(22, 52, 58, 0.1);
+      --shadow: 0 24px 70px rgba(30, 42, 44, 0.12);
+      --radius: 28px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(70, 167, 174, 0.18), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(239, 124, 99, 0.18), transparent 28%),
+        linear-gradient(180deg, #fbf7f0 0%, var(--bg) 52%, #efe5d7 100%);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+      background-size: 48px 48px;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .shell {
+      position: relative;
+      width: min(1220px, calc(100% - 28px));
+      margin: 18px auto;
+      padding: 28px;
+      border-radius: 36px;
+      background: rgba(255, 252, 247, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+      overflow: hidden;
+    }
+
+    .shell::after {
+      content: "";
+      position: absolute;
+      inset: auto auto -140px -120px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(217, 165, 69, 0.18), transparent 68%);
+      pointer-events: none;
+    }
+
+    .topbar,
+    .hero,
+    .grid,
+    .note {
+      position: relative;
+      z-index: 1;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 44px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+      font-weight: 700;
+      font-size: 1.12rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brand-mark {
+      display: inline-grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      color: #f7fbfa;
+      background: linear-gradient(135deg, var(--slate), var(--teal));
+      box-shadow: 0 12px 26px rgba(11, 127, 130, 0.24);
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      padding: 10px 16px;
+      border-radius: 999px;
+      color: var(--muted);
+      transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+      transform: translateY(-1px);
+      color: var(--ink);
+      background: rgba(11, 127, 130, 0.1);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      gap: 26px;
+      align-items: start;
+      margin-bottom: 34px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(11, 127, 130, 0.1);
+      color: var(--teal);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 16px 0 0;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+      font-size: clamp(2.8rem, 5vw, 4.9rem);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      max-width: 12ch;
+    }
+
+    .hero p {
+      margin: 18px 0 0;
+      color: var(--muted);
+      line-height: 1.82;
+      font-size: 1.02rem;
+      max-width: 62ch;
+    }
+
+    .hero-panel {
+      padding: 22px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(244, 238, 229, 0.78));
+      border: 1px solid rgba(255, 255, 255, 0.54);
+    }
+
+    .hero-panel strong {
+      display: block;
+      margin-bottom: 10px;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+      font-size: 1.22rem;
+    }
+
+    .hero-panel p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.97rem;
+      line-height: 1.72;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .card {
+      display: grid;
+      grid-template-columns: minmax(210px, 0.95fr) minmax(0, 1.05fr);
+      gap: 18px;
+      padding: 18px;
+      border-radius: var(--radius);
+      background: var(--panel);
+      border: 1px solid rgba(255, 255, 255, 0.54);
+      box-shadow: 0 16px 36px rgba(33, 43, 45, 0.08);
+      backdrop-filter: blur(10px);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .card:hover,
+    .card:focus-within {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 44px rgba(33, 43, 45, 0.12);
+    }
+
+    .art {
+      position: relative;
+      min-height: 230px;
+      padding: 18px;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(246, 241, 233, 0.92));
+    }
+
+    .art::before {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      pointer-events: none;
+    }
+
+    .art svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8px 6px;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(22, 52, 58, 0.08);
+      color: var(--ink);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .copy h2 {
+      margin: 14px 0 12px;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+      font-size: 1.8rem;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .copy p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.78;
+    }
+
+    .note {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) auto;
+      gap: 18px;
+      align-items: center;
+      margin-top: 26px;
+      padding: 22px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(22, 52, 58, 0.95), rgba(11, 127, 130, 0.92));
+      color: #f7fbfa;
+    }
+
+    .note strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+    }
+
+    .note p {
+      margin: 0;
+      color: rgba(247, 251, 250, 0.82);
+      line-height: 1.72;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 14px 20px;
+      border-radius: 18px;
+      border: 1px solid rgba(247, 251, 250, 0.24);
+      background: rgba(255, 255, 255, 0.08);
+      color: #f7fbfa;
+      font-weight: 700;
+      transition: transform 180ms ease, background-color 180ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    footer {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1024px) {
+      .hero,
+      .note,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .shell {
+        width: min(100% - 16px, 100%);
+        margin: 8px auto;
+        padding: 18px;
+        border-radius: 28px;
+      }
+
+      .card {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        max-width: none;
+      }
+
+      .art {
+        min-height: 210px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">NA</span>
+        <span>Neurosurgery Field Guide</span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="#grid">Subspecialties</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">Subspecialty map</span>
+          <h1>Eight windows into modern neurosurgery.</h1>
+          <p>
+            Neurosurgery is usually divided into focused service lines because each group of disorders demands
+            different anatomy knowledge, operative strategies, and long-term care models. The categories below are
+            a concise synthesis of common neurosurgery subspecialty groupings used by academic departments and
+            professional sections.
+          </p>
+        </div>
+        <aside class="hero-panel">
+          <strong>How to read this page</strong>
+          <p>
+            Each card pairs a short explanatory blurb with a custom illustration. The goal is not to be exhaustive,
+            but to give a clear visual sense of how the field branches into vascular, tumor, spine, pediatric,
+            functional, skull base, peripheral nerve, and cerebrospinal fluid focused practice.
+          </p>
+        </aside>
+      </section>
+
+      <section id="grid" class="grid" aria-label="Neurosurgery subspecialties">
+        <article class="card">
+          <div class="art">
+            <svg viewBox="0 0 320 220" role="img" aria-label="Illustration for cerebrovascular and endovascular neurosurgery">
+              <defs>
+                <linearGradient id="vascularGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#46a7ae" />
+                  <stop offset="100%" stop-color="#0b7f82" />
+                </linearGradient>
+              </defs>
+              <rect x="0" y="0" width="320" height="220" rx="24" fill="#fff9f3" />
+              <path d="M84 155C98 127 120 111 145 96C175 79 190 56 195 35" fill="none" stroke="#16343a" stroke-width="10" stroke-linecap="round" />
+              <path d="M145 96C167 94 190 103 211 124C224 138 240 154 259 164" fill="none" stroke="url(#vascularGlow)" stroke-width="12" stroke-linecap="round" />
+              <path d="M145 96C140 123 145 145 162 166" fill="none" stroke="#ef7c63" stroke-width="10" stroke-linecap="round" />
+              <circle cx="146" cy="96" r="18" fill="#fff" stroke="#16343a" stroke-width="6" />
+              <circle cx="146" cy="96" r="8" fill="#ef7c63" />
+              <circle cx="243" cy="150" r="16" fill="#16343a" opacity="0.12" />
+              <path d="M236 151L242 157L255 143" fill="none" stroke="#16343a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="copy">
+            <span class="kicker">Cerebrovascular</span>
+            <h2>Cerebrovascular and endovascular surgery</h2>
+            <p>
+              Focuses on disorders of blood vessels in the brain and spinal cord, including aneurysms,
+              arteriovenous malformations, cavernous malformations, and some stroke-related emergencies.
+              Treatment may involve open microsurgery, catheter-based endovascular therapy, or both.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="art">
+            <svg viewBox="0 0 320 220" role="img" aria-label="Illustration for spine surgery">
+              <rect x="0" y="0" width="320" height="220" rx="24" fill="#fff8f1" />
+              <path d="M158 30C146 50 144 70 151 90C138 108 137 128 150 147C140 164 143 183 157 197" fill="none" stroke="#16343a" stroke-width="8" stroke-linecap="round" />
+              <g fill="#46a7ae" stroke="#16343a" stroke-width="5">
+                <rect x="136" y="40" width="50" height="20" rx="10" />
+                <rect x="130" y="71" width="60" height="20" rx="10" />
+                <rect x="133" y="102" width="56" height="20" rx="10" />
+                <rect x="128" y="133" width="62" height="20" rx="10" />
+                <rect x="134" y="164" width="56" height="20" rx="10" />
+              </g>
+              <path d="M202 62C228 77 242 102 244 132" fill="none" stroke="#ef7c63" stroke-width="6" stroke-linecap="round" stroke-dasharray="5 10" />
+            </svg>
+          </div>
+          <div class="copy">
+            <span class="kicker">Spine</span>
+            <h2>Spine surgery</h2>
+            <p>
+              Covers degenerative disease, disc herniation, instability, deformity, fractures, spinal tumors,
+              and spinal cord compression. Surgeons in this area often blend decompression, reconstruction,
+              instrumentation, and minimally invasive techniques.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="art">
+            <svg viewBox="0 0 320 220" role="img" aria-label="Illustration for neuro-oncology">
+              <defs>
+                <radialGradient id="tumorGlow" cx="50%" cy="50%" r="55%">
+                  <stop offset="0%" stop-color="#ef7c63" />
+                  <stop offset="100%" stop-color="#d95e4e" />
+                </radialGradient>
+              </defs>
+              <rect x="0" y="0" width="320" height="220" rx="24" fill="#fffaf4" />
+              <circle cx="160" cy="110" r="72" fill="none" stroke="#16343a" stroke-width="6" />
+              <circle cx="160" cy="110" r="48" fill="url(#tumorGlow)" opacity="0.28" />
+              <path d="M160 42V69M160 151V178M92 110H119M201 110H228" stroke="#16343a" stroke-width="5" stroke-linecap="round" />
+              <circle cx="160" cy="110" r="22" fill="#ef7c63" stroke="#16343a" stroke-width="6" />
+              <path d="M145 95C155 90 170 90 178 100C186 110 181 126 169 132C160 136 148 133 141 125C133 117 136 101 145 95Z" fill="#fff6f1" opacity="0.75" />
+            </svg>
+          </div>
+          <div class="copy">
+            <span class="kicker">Tumor care</span>
+            <h2>Neuro-oncology</h2>
+            <p>
+              Centers on primary and metastatic tumors of the brain, spine, meninges, and related structures.
+              The work often involves maximizing safe resection while coordinating closely with radiation
+              oncology, medical oncology, neuropathology, and rehabilitation.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="art">
+            <svg viewBox="0 0 320 220" role="img" aria-label="Illustration for skull base surgery">
+              <rect x="0" y="0" width="320" height="220" rx="24" fill="#fff9f2" />
+              <path d="M102 84C102 46 128 28 160 28C192 28 218 46 218 84V98C218 124 201 147 177 155V177C177 191 169 199 160 199C151 199 143 191 143 177V155C119 147 102 124 102 98V84Z" fill="none" stroke="#16343a" stroke-width="7" />
+              <circle cx="138" cy="95" r="10" fill="#46a7ae" />
+              <circle cx="182" cy="95" r="10" fill="#46a7ae" />
+              <path d="M147 126C153 132 167 132 173 126" fill="none" stroke="#ef7c63" stroke-width="6" stroke-linecap="round" />
+              <path d="M160 48V76" stroke="#d9a545" stroke-width="6" stroke-linecap="round" />
+              <path d="M232 76L258 50" stroke="#16343a" stroke-width="5" stroke-linecap="round" />
+              <circle cx="266" cy="42" r="18" fill="#16343a" opacity="0.12" />
+            </svg>
+          </div>
+          <div class="copy">
+            <span class="kicker">Skull base</span>
+            <h2>Skull base surgery</h2>
+            <p>
+              Deals with lesions tucked around the underside of the brain, cranial nerves, major arteries,
+              and the upper cervical junction. These operations often combine microsurgical and endoscopic
+              routes because the anatomy is deep, narrow, and densely packed.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="art">
+            <svg viewBox="0 0 320 220" role="img" aria-label="Illustration for pediatric neurosurgery">
+              <rect x="0" y="0" width="320" height="220" rx="24" fill="#fffaf5" />
+              <circle cx="160" cy="78" r="38" fill="#46a7ae" opacity="0.24" stroke="#16343a" stroke-width="6" />
+              <path d="M160 116C127 116 101 142 101 174V184H219V174C219 142 193 116 160 116Z" fill="#ef7c63" opacity="0.28" stroke="#16343a" stroke-width="6" />
+              <circle cx="98" cy="58" r="10" fill="#d9a545" />
+              <path d="M98 43V73M83 58H113" stroke="#d9a545" stroke-width="5" stroke-linecap="round" />
+              <circle cx="228" cy="66" r="8" fill="#46a7ae" />
+              <circle cx="242" cy="50" r="6" fill="#ef7c63" />
+            </svg>
+          </div>
+          <div class="copy">
+            <span class="kicker">Pediatric</span>
+            <h2>Pediatric neurosurgery</h2>
+            <p>
+              Focuses on neurosurgical problems in infants, children, and adolescents, such as congenital
+              malformations, hydrocephalus, epilepsy, tumors, trauma, and spasticity. Pediatric care is distinct
+              because the nervous system, skull, spine, and family context are all still developing.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="art">
+            <svg viewBox="0 0 320 220" role="img" aria-label="Illustration for functional and epilepsy surgery">
+              <rect x="0" y="0" width="320" height="220" rx="24" fill="#fffaf4" />
+              <path d="M104 88C104 58 128 38 160 38C192 38 216 58 216 88C216 118 196 142 170 148V176C170 186 166 192 160 192C154 192 150 186 150 176V148C124 142 104 118 104 88Z" fill="none" stroke="#16343a" stroke-width="7" />
+              <path d="M160 58V118" stroke="#16343a" stroke-width="4" stroke-linecap="round" opacity="0.65" />
+              <circle cx="136" cy="84" r="10" fill="#46a7ae" />
+              <circle cx="184" cy="92" r="10" fill="#ef7c63" />
+              <circle cx="154" cy="116" r="10" fill="#d9a545" />
+              <path d="M136 84L154 116L184 92" fill="none" stroke="#16343a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M233 53V112" stroke="#36535a" stroke-width="5" stroke-linecap="round" />
+              <circle cx="233" cy="45" r="12" fill="#36535a" />
+              <path d="M233 112C256 118 270 132 275 156" fill="none" stroke="#46a7ae" stroke-width="5" stroke-linecap="round" stroke-dasharray="6 10" />
+            </svg>
+          </div>
+          <div class="copy">
+            <span class="kicker">Functional</span>
+            <h2>Functional and epilepsy surgery</h2>
+            <p>
+              Treats disorders of brain networks rather than visible mass lesions alone, including epilepsy,
+              Parkinson disease, tremor, dystonia, pain, and some psychiatric conditions. Techniques may involve
+              stereotactic targeting, ablation, neuromodulation, and implanted stimulation systems.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="art">
+            <svg viewBox="0 0 320 220" role="img" aria-label="Illustration for peripheral nerve surgery">
+              <rect x="0" y="0" width="320" height="220" rx="24" fill="#fff8f2" />
+              <path d="M98 152C98 126 114 108 130 108H156C166 108 174 101 174 92V78C174 66 181 58 191 58C201 58 208 66 208 78V122C208 132 216 140 226 140C236 140 244 148 244 160C244 172 235 182 221 182H145C118 182 98 170 98 152Z" fill="none" stroke="#16343a" stroke-width="7" />
+              <path d="M118 145C140 134 161 131 182 135C196 138 212 147 224 162" fill="none" stroke="#46a7ae" stroke-width="6" stroke-linecap="round" />
+              <circle cx="144" cy="136" r="10" fill="#ef7c63" />
+              <circle cx="183" cy="138" r="9" fill="#d9a545" />
+              <circle cx="215" cy="156" r="10" fill="#46a7ae" />
+            </svg>
+          </div>
+          <div class="copy">
+            <span class="kicker">Peripheral nerve</span>
+            <h2>Peripheral nerve surgery</h2>
+            <p>
+              Concentrates on nerves outside the brain and spinal cord, including compression syndromes,
+              traumatic injuries, tumors, nerve transfers, and brachial plexus reconstruction. The aim is often
+              to recover function, reduce pain, or restore signal flow to muscles and skin.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="art">
+            <svg viewBox="0 0 320 220" role="img" aria-label="Illustration for hydrocephalus, cerebrospinal fluid, and neuroendoscopy">
+              <rect x="0" y="0" width="320" height="220" rx="24" fill="#fffaf4" />
+              <path d="M160 42C192 42 217 66 217 97C217 128 194 150 166 156V178C166 188 163 194 160 194C157 194 154 188 154 178V156C126 150 103 128 103 97C103 66 128 42 160 42Z" fill="none" stroke="#16343a" stroke-width="7" />
+              <path d="M160 70C172 86 184 100 184 116C184 131 173 142 160 142C147 142 136 131 136 116C136 100 148 86 160 70Z" fill="#46a7ae" opacity="0.4" stroke="#0b7f82" stroke-width="5" />
+              <path d="M215 74C234 83 247 101 252 127" fill="none" stroke="#ef7c63" stroke-width="6" stroke-linecap="round" stroke-dasharray="6 10" />
+              <circle cx="259" cy="139" r="16" fill="#16343a" opacity="0.12" />
+              <path d="M252 139L258 145L270 132" fill="none" stroke="#16343a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="copy">
+            <span class="kicker">CSF pathways</span>
+            <h2>Hydrocephalus, CSF disorders, and neuroendoscopy</h2>
+            <p>
+              Covers problems related to cerebrospinal fluid circulation, ventricular anatomy, shunts, endoscopic
+              third ventriculostomy, cyst fenestration, and related obstructive conditions. This area often blends
+              precise navigation, imaging, and long-term device management.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="note">
+        <div>
+          <strong>Why these eight?</strong>
+          <p>
+            They capture the major ways departments commonly organize clinical expertise while staying readable
+            for a first-pass overview. In real practice, there is overlap, and many neurosurgeons work across more
+            than one adjacent area.
+          </p>
+        </div>
+        <a class="button" href="index.html">Back to the landing page</a>
+      </section>
+    </main>
+
+    <footer>
+      Content is high-level and educational in tone, not a substitute for professional medical advice or a complete
+      taxonomy of every fellowship pathway in neurosurgery.
+    </footer>
+  </div>
+</body>
+</html>
