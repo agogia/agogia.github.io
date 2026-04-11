@@ -1,4 +1,8 @@
 - setup a static github page
 - register the squarespace domain to reach the github static page
+
+NEW LINE!!!!!!
+
+
 - create a github action that publishes to the github static page
 - create a github action that shows a preview for a new pull request branch
