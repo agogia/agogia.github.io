@@ -84,5 +84,10 @@ window.siteLinks = [
     href: "https://www.youtube.com/watch?v=9gVA2nVX1LQ",
     title: "Skull Base Foramina",
     note: ", a video from Radiology Tutorials."
+  },
+  {
+    href: "https://www.bilibili.com/video/BV1v4411q7Jz/?utm_source=chatgpt.com",
+    title: "YBN Cordae ft. Anderson .Paak - RNP live @ Jimmy Fallon",
+    note: ", a video on Bilibili."
   }
 ];
