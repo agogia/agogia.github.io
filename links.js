@@ -24,5 +24,45 @@ window.siteLinks = [
     href: "https://www.youtube.com/watch?v=79y_YCkHhso",
     title: "Kobe Bryant Incredible Game Tying + Game Winning Shots vs Portland",
     note: ", a clip on YouTube."
+  },
+  {
+    href: "https://notes.andymatuschak.org/zWzVw2VM4TPjpKXnHUfLaso",
+    title: "It’s hard to hear yourself think",
+    note: ", a note by Andy Matuschak."
+  },
+  {
+    href: "https://www.paulgraham.com/love.html",
+    title: "How to Do What You Love",
+    note: ", an essay by Paul Graham."
+  },
+  {
+    href: "https://seeing-theory.brown.edu/#firstPage",
+    title: "Seeing Theory",
+    note: ", an interactive introduction to probability and statistics."
+  },
+  {
+    href: "https://neuroangio.org/anatomy-and-variants/internal-carotid-artery-and-its-aneurysms/",
+    title: "Internal Carotid Artery and Its Aneurysms",
+    note: ", a reference from neuroangio.org."
+  },
+  {
+    href: "https://stratechery.com/2019/spotifys-podcast-aggregation-play/",
+    title: "Spotify’s Podcast Aggregation Play",
+    note: ", a post by Ben Thompson."
+  },
+  {
+    href: "https://www.amazon.com/Basketball-Other-Things-Collection-Illustrated/dp/1419726471",
+    title: "Basketball (and Other Things): A Collection of Questions Asked, Answered, Illustrated",
+    note: ", a book by Shea Serrano."
+  },
+  {
+    href: "https://open.spotify.com/playlist/6dPsggAViCF6mMn6YzPLve",
+    title: "Binge Mode: Harry Potter",
+    note: ", a Spotify playlist by Anna Helfen."
+  },
+  {
+    href: "https://www.netflix.com/title/80007945",
+    title: "Chef's Table",
+    note: ", a Netflix series."
   }
 ];
