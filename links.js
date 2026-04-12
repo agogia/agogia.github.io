@@ -86,7 +86,7 @@ window.siteLinks = [
     note: ", a video from Radiology Tutorials."
   },
   {
-    href: "https://www.bilibili.com/video/BV1v4411q7Jz/?utm_source=chatgpt.com",
+    href: "https://www.bilibili.com/video/BV1v4411q7Jz/",
     title: "YBN Cordae ft. Anderson .Paak - RNP live @ Jimmy Fallon",
     note: ", a video on Bilibili."
   }
