@@ -56,16 +56,6 @@ window.siteLinks = [
     note: ", a book by Shea Serrano."
   },
   {
-    href: "https://open.spotify.com/playlist/6dPsggAViCF6mMn6YzPLve",
-    title: "Binge Mode: Harry Potter",
-    note: ", a Spotify playlist by Anna Helfen."
-  },
-  {
-    href: "https://www.netflix.com/title/80007945",
-    title: "Chef's Table",
-    note: ", a Netflix series."
-  },
-  {
     href: "https://www.marmol-radziner.com/",
     title: "Marmol Radziner",
     note: ", a design-build architecture practice."
