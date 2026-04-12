@@ -37,7 +37,7 @@
     }
 
     main {
-      width: min(100% - 2rem, 38rem);
+      width: min(100% - 2rem, 46rem);
       margin: 0 auto;
       padding: 5rem 0 6rem;
     }
@@ -94,7 +94,7 @@
 
     @media (max-width: 640px) {
       main {
-        width: min(100% - 1.5rem, 38rem);
+        width: min(100% - 1.5rem, 46rem);
         padding: 3.5rem 0 4rem;
       }
 
@@ -112,14 +112,21 @@
 
     <section aria-labelledby="links-heading">
       <h2 id="links-heading">Links</h2>
-      <ul>
-        <li>
-          <a href="http://johnsalvatier.org/blog/2017/reality-has-a-surprising-amount-of-detail">
-            Reality has a surprising amount of detail
-          </a><span class="link-note">, an essay by John Salvatier.</span>
-        </li>
-      </ul>
+      <ul id="links-list"></ul>
     </section>
   </main>
+  <script src="links.js"></script>
+  <script>
+    const linksList = document.getElementById("links-list");
+
+    if (Array.isArray(window.siteLinks)) {
+      linksList.innerHTML = window.siteLinks
+        .map(({ href, title, note }) => {
+          const noteText = note ? `<span class="link-note">${note}</span>` : "";
+          return `<li><a href="${href}">${title}</a>${noteText}</li>`;
+        })
+        .join("");
+    }
+  </script>
 </body>
 </html>
