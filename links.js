@@ -64,5 +64,25 @@ window.siteLinks = [
     href: "https://www.netflix.com/title/80007945",
     title: "Chef's Table",
     note: ", a Netflix series."
+  },
+  {
+    href: "https://www.marmol-radziner.com/",
+    title: "Marmol Radziner",
+    note: ", a design-build architecture practice."
+  },
+  {
+    href: "https://slatestarcodex.com/2014/06/08/map-territory-distinctions/",
+    title: "Map-Territory Distinctions",
+    note: ", a post from Slate Star Codex."
+  },
+  {
+    href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9714519/pdf/nihms-1525169.pdf",
+    title: "Speech synthesis from neural decoding of spoken sentences",
+    note: ", a paper from Edward Chang's lab at UCSF."
+  },
+  {
+    href: "https://www.youtube.com/watch?v=9gVA2nVX1LQ",
+    title: "Skull Base Foramina",
+    note: ", a video from Radiology Tutorials."
   }
 ];
