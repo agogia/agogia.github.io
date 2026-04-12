@@ -7,7 +7,7 @@ window.siteLinks = [
   },
   {
     href: "https://marginalrevolution.com/marginalrevolution/2018/10/high-return-activity-raising-others-aspirations.html",
-    title: "A High Return Activity of Raising Others' Aspirations",
+    title: "A high return activity of raising others' aspirations",
     note: ", a post from Marginal Revolution."
   },
   {
@@ -17,12 +17,12 @@ window.siteLinks = [
   },
   {
     href: "https://visakanv.substack.com/p/are-you-serious",
-    title: "Are You Serious?",
+    title: "Are you serious?",
     note: ", a post by Visakan Veerasamy."
   },
   {
     href: "https://www.youtube.com/watch?v=79y_YCkHhso",
-    title: "Kobe Bryant Incredible Game Tying + Game Winning Shots vs Portland",
+    title: "Kobe Bryant incredible game tying + game winning shots vs Portland",
     note: ", a clip on YouTube."
   },
   {
@@ -32,7 +32,7 @@ window.siteLinks = [
   },
   {
     href: "https://www.paulgraham.com/love.html",
-    title: "How to Do What You Love",
+    title: "How to do what you love",
     note: ", an essay by Paul Graham."
   },
   {
@@ -42,17 +42,17 @@ window.siteLinks = [
   },
   {
     href: "https://neuroangio.org/anatomy-and-variants/internal-carotid-artery-and-its-aneurysms/",
-    title: "Internal Carotid Artery and Its Aneurysms",
+    title: "Internal carotid artery and its aneurysms",
     note: ", a reference from neuroangio.org."
   },
   {
     href: "https://stratechery.com/2019/spotifys-podcast-aggregation-play/",
-    title: "Spotify’s Podcast Aggregation Play",
+    title: "Spotify’s podcast aggregation play",
     note: ", a post by Ben Thompson."
   },
   {
     href: "https://www.amazon.com/Basketball-Other-Things-Collection-Illustrated/dp/1419726471",
-    title: "Basketball (and Other Things): A Collection of Questions Asked, Answered, Illustrated",
+    title: "Basketball (and other things): a collection of questions asked, answered, illustrated",
     note: ", a book by Shea Serrano."
   },
   {
@@ -72,7 +72,7 @@ window.siteLinks = [
   },
   {
     href: "https://slatestarcodex.com/2014/06/08/map-territory-distinctions/",
-    title: "Map-Territory Distinctions",
+    title: "Map-territory distinctions",
     note: ", a post from Slate Star Codex."
   },
   {
@@ -82,7 +82,7 @@ window.siteLinks = [
   },
   {
     href: "https://www.youtube.com/watch?v=9gVA2nVX1LQ",
-    title: "Skull Base Foramina",
+    title: "Skull base foramina",
     note: ", a video from Radiology Tutorials."
   },
   {
