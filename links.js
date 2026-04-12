@@ -51,11 +51,6 @@ window.siteLinks = [
     note: ", a post by Ben Thompson."
   },
   {
-    href: "https://www.amazon.com/Basketball-Other-Things-Collection-Illustrated/dp/1419726471",
-    title: "Basketball (and other things): a collection of questions asked, answered, illustrated",
-    note: ", a book by Shea Serrano."
-  },
-  {
     href: "https://www.marmol-radziner.com/",
     title: "Marmol Radziner",
     note: ", a design-build architecture practice."
