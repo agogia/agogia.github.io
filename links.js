@@ -77,7 +77,7 @@ window.siteLinks = [
   },
   {
     href: "https://www.andrewscottart.com/upcoming",
-    title: "Gallery 3",
+    title: "Parallel Worlds Collection",
     note: ", from Andrew Scott Art."
   }
 ];
