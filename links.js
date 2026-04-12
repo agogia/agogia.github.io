@@ -79,5 +79,15 @@ window.siteLinks = [
     href: "https://www.andrewscottart.com/upcoming",
     title: "Parallel Worlds Collection",
     note: ", from Andrew Scott Art."
+  },
+  {
+    href: "https://www.youtube.com/watch?v=xLcHPsWK5xg",
+    title: "The Dark Knight opening scene",
+    note: ", a clip on YouTube."
+  },
+  {
+    href: "https://www.youtube.com/watch?v=M-8FksMVAdU",
+    title: "Tracy McGrady 13 points vs the Spurs in 33 seconds",
+    note: ", a clip on YouTube."
   }
 ];
