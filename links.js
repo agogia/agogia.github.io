@@ -74,5 +74,10 @@ window.siteLinks = [
     href: "https://www.bilibili.com/video/BV1v4411q7Jz/",
     title: "YBN Cordae ft. Anderson .Paak - RNP live @ Jimmy Fallon",
     note: ", a video on Bilibili."
+  },
+  {
+    href: "https://www.andrewscottart.com/upcoming",
+    title: "Gallery 3",
+    note: ", from Andrew Scott Art."
   }
 ];
