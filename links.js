@@ -89,5 +89,20 @@ window.siteLinks = [
     href: "https://www.youtube.com/watch?v=M-8FksMVAdU",
     title: "Tracy McGrady 13 points vs the Spurs in 33 seconds",
     note: ", a clip on YouTube."
+  },
+  {
+    href: "https://www.youtube.com/watch?v=qpV_3gMbZEo&list=PL3UxSYwNYEOtIydy0V_6QG6K8S5QluxFt",
+    title: "Late Orchestration at Abbey Road",
+    note: ", a clip on YouTube."
+  },
+  {
+    href: "https://www.youtube.com/watch?v=fY7l2pcxdHM",
+    title: "Kobe Bryant exclaims the job's not finished",
+    note: ", a clip on YouTube."
+  },
+  {
+    href: "https://www.youtube.com/watch?v=ZyGGa5AFY_I",
+    title: "Low Life (Live on SNL)",
+    note: ", a clip on YouTube."
   }
 ];
