@@ -107,7 +107,7 @@ window.siteLinks = [
   },
   {
     href: "https://www.oaktreecapital.com/docs/default-source/memos/2014-04-08-dare-to-be-great-ii.pdf",
-    title: "Dare to be great",
+    title: "Dare to Be Great II",
     note: ", an Oaktree memo."
   },
   {
