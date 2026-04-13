@@ -104,5 +104,15 @@ window.siteLinks = [
     href: "https://www.youtube.com/watch?v=ZyGGa5AFY_I",
     title: "Low Life (Live on SNL)",
     note: ", a clip on YouTube."
+  },
+  {
+    href: "https://www.oaktreecapital.com/docs/default-source/memos/2014-04-08-dare-to-be-great-ii.pdf",
+    title: "Dare to be great",
+    note: ", an Oaktree memo."
+  },
+  {
+    href: "https://www.youtube.com/watch?v=_9L3j-lVLwk",
+    title: "Wyclef Jean",
+    note: ", a clip on YouTube."
   }
 ];
