@@ -114,5 +114,10 @@ window.siteLinks = [
     href: "https://www.youtube.com/watch?v=_9L3j-lVLwk",
     title: "Wyclef Jean",
     note: ", a clip on YouTube."
+  },
+  {
+    href: "https://www.youtube.com/watch?v=CIjXUg1s5gc",
+    title: "T-Pain: NPR Music Tiny Desk Concert",
+    note: ", a clip on YouTube."
   }
 ];
