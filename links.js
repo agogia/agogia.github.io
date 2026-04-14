@@ -119,5 +119,10 @@ window.siteLinks = [
     href: "https://www.youtube.com/watch?v=CIjXUg1s5gc",
     title: "T-Pain: NPR Music Tiny Desk Concert",
     note: ", a clip on YouTube."
+  },
+  {
+    href: "https://usefulfictions.substack.com/p/50-things-i-know",
+    title: "50 things I know",
+    note: ", a post by Cate Hall."
   }
 ];
