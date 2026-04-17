@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake | Angad Gogia</title>
+  <meta
+    name="description"
+    content="A minimal snake game by Angad Gogia."
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main>
+    <section aria-labelledby="snake-heading">
+      <header>
+        <h2 id="snake-heading">snake</h2>
+        <p class="scoreboard" aria-label="Game stats">
+          <span>score <strong id="score">0</strong></span>
+        </p>
+      </header>
+
+      <div class="board-wrap">
+        <canvas
+          id="snake-board"
+          width="420"
+          height="420"
+          tabindex="0"
+          aria-label="Snake game board. Press an arrow key or swipe to begin."
+        >
+          Your browser does not support the canvas element.
+        </canvas>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
